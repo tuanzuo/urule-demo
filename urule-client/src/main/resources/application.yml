@@ -1,0 +1,6 @@
+server:
+  port: 8081
+spring:
+  application:
+    #配置应用名
+    name: uruleclient
