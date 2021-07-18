@@ -10,3 +10,8 @@
 2.1、启动urule-client这个模块的应用
 
 2.2、请求分流规则：http://127.0.0.1:8081/urule/test?userTag=C
+
+#### 3、urule官方文档
+http://www.bstek.com/products/urule
+
+http://www.bstek.com/resources/doc/
