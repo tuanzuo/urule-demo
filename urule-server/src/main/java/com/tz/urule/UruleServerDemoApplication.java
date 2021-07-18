@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource("${rm.config}")
-@ImportResource({"classpath:context.xml"})
+@ImportResource({"classpath:urule/context.xml"})
 public class UruleServerDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UruleServerDemoApplication.class,args);

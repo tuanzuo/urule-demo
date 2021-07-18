@@ -2,6 +2,9 @@ package com.tz.urule.dto;
 
 import com.bstek.urule.model.Label;
 
+/**
+ * 分流规则
+ */
 public class ABRule {
     @Label("用户的dmp标签")
     private String userDmpTag;
