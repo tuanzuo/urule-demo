@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
+/**
+ * urule服务端启动类
+ */
 @SpringBootApplication
 @PropertySource("${rm.config}")
 @ImportResource({"classpath:urule/context.xml"})
