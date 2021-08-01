@@ -18,7 +18,17 @@
 
 2.4、使用Restful的方式调用分流规则：http://127.0.0.1:8081/urule/test/rest?userTag=A
 
-#### 3、urule官方文档
+#### 3、urule使用注意事项
+3.1、规则中的“优先级”属性表示“满足条件的规则中动作的执行顺序”，而不是规则执行的优先级；如果要实现“规则执行的优先级”，可以通过配置“互斥组”的方式来实现；
+参考官方文档：http://www.bstek.com/resources/doc/4gui-ze-ji.html
+3.2、当使用“分布式计算模式”时需要注意一个应用有多个实例且每次实例重新部署后ip发生了变化，服务端如何动态的感知客户端ip的变化（规则修改后，服务端主动推送规则到客户端会用到）；
+官方的解决方案参考：http://www.bstek.com/resources/doc/16ke-hu-duan-fu-wu-qi-pei-zhi.html中的“客户端动态配置”
+（官方给出的例子，看不出来如何服务端如何动态的感知客户端ip的变化的）
+当然如果服务端动态的感知客户端ip的变化不好实现，可以让客户端主动拉取规则，而不是服务端主动推送；
+-->把客户端中的“urule.knowledgeUpdateCycle”参数配置成10000（表示每隔10000毫秒检查一次知识包是否有更新）
+参考官方文档：http://www.bstek.com/resources/doc/2an-zhuang-yu-pei-zhi.html
+
+#### 4、urule官方文档
 http://www.bstek.com/products/urule
 
 http://www.bstek.com/resources/doc/
